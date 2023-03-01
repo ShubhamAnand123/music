@@ -13,7 +13,7 @@ const playtune=(key)=>{
  },150);
 }
 pianokeys.forEach(key=>{
-    key.addEventListener("click",() => playtune(key.dataset.key));
+    key.addEventListener("mouseenter",() => playtune(key.dataset.key));
 
 });
 const handleVolume=(e)=>{
