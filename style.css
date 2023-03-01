@@ -157,6 +157,10 @@ margin-right: 15px;
     display: none;
 
     }
+    .pianokeys.key
+{
+    user-select: none;
+}
 }
 @media screen and(max-width:615px)
 {
@@ -171,6 +175,10 @@ margin-right: 15px;
 .pianokeys .white
 {
     width:50px;
+}
+    .pianokeys.key
+{
+    user-select: none;
 }
 
 
