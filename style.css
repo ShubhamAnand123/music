@@ -1,0 +1,177 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #ffff;
+    padding: 0 10px;
+}
+.wrapper{
+    border-radius: 20px;
+    padding: 35px 40px;
+    background: rgba(0, 0, 0, 0.866);
+}
+.wrapper header
+{
+    color:beige;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header h2{
+    font-size: 1.2rem;
+}
+.header .volume
+{
+    display: flex;
+    align-items: center;
+}
+header .volume span
+{
+font-weight: 500;
+font-size: 1.19rem;
+margin-right: 15px;
+}
+.volume input{
+    accent-color: white;
+}
+.check input{
+    width:60px;
+    height:25px;
+    cursor: pointer;
+    appearance: none;
+    border-radius: 30px;
+    background: #4b4b4b;
+    position: relative;
+}
+.check input::before{
+    content:"";
+    position: absolute;
+    background: #8c8c8c;
+    width:25px;
+    height:25px;
+    position: absolute;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+.check input:checked:before
+{
+    left: 40px;
+    border-radius: 20px;
+    width:25px;
+    background-color: #fff;
+}
+.pianokeys .key
+{
+  color:azure;
+  user-select: none;
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  text-transform: uppercase;
+}
+.pianokeys .key.hide span{
+ display: none;
+}
+.pianokeys
+{
+    display: flex;
+    margin-top: 40px;
+
+}
+.pianokeys .black.active{
+    background:linear-gradient(to bottom,#2d2d2d 92%,#040404 );
+    box-shadow: inset -5px 15px 20px rgba(011, 0, 10, 0.26);
+}
+.pianokeys .black{
+    width:50px;
+    height: 138px;
+    border-radius: 0 0 8px;
+     color:white;
+     font-weight: bold;
+     font-size: 1rem;
+     margin: 0 -15px 0 -10px;
+     background: linear-gradient(black,#0e0707,#636363);
+     z-index: 2;
+
+   
+}
+.pianokeys .white.active{
+    background:linear-gradient(to bottom,#fff 92%,#464545 );
+    box-shadow: inset -5px 15px 20px rgba(011, 0, 10, 0.26);
+}
+.pianokeys .white{
+    width:70px;
+    height: 230px;
+    border-radius: 8px;
+     color:black;
+     font-weight: bold;
+     font-size: 0.95rem;
+    background:linear-gradient(#fff 92%,#464545 );
+    border:1px solid black;
+}
+.pianokeys span{
+    position: absolute;
+    margin-left:2px;
+    bottom: 20px;
+    width:100%;
+    text-align: center;
+}
+@media screen and (max-width:615px){
+    .wrapper
+    {
+        padding:25px;
+    }
+    header{
+        flex-direction: column;
+
+    }
+    header:where(h2,.column)
+    {
+        margin-bottom:13px;
+    }
+    .volume slider input{
+        max-width:100px;
+    }
+    .pianokeys{
+        margin-top:20px;
+    }
+    .pianokeys.black{
+        height:100px;
+        width:40px;
+        margin:0 -10px 0 -10px;
+    }
+    .pianokeys.white{
+        height:180px;
+        width:60px;
+    
+    }
+    .pianokeys.key:where(:nth-child(9),:nth-child(10))
+ {
+    display: none;
+
+    }
+}
+@media screen and(max-width:615px)
+{
+.pianokeys .key:nth-child(13),
+.pianokeys .key:nth-child(14),
+.pianokeys .key:nth-child(15),
+.pianokeys .key:nth-child(16),
+.pianokeys .key:nth-child(17)
+{
+    display:none;
+}
+.pianokeys .white
+{
+    width:50px;
+}
+
+
+}
